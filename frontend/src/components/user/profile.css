@@ -1,0 +1,261 @@
+/* GitHub Profile Styles */
+
+.github-profile {
+    min-height: 100vh;
+    background-color: #0d1117;
+    color: #c9d1d9;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif;
+}
+
+/* Header Styles */
+.header {
+    background-color: #161b22;
+    border-bottom: 1px solid #30363d;
+    padding: 16px 32px;
+}
+
+.header-content {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.github-logo {
+    color: #f0f6fc;
+}
+
+.logo-text {
+    font-size: 20px;
+    font-weight: 600;
+    color: #f0f6fc;
+}
+
+.nav-links {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+}
+
+.nav-link {
+    color: #f0f6fc;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: background-color 0.2s;
+}
+
+.nav-link:hover {
+    background-color: #30363d;
+}
+
+/* Tabs Container */
+.tabs-container {
+    background-color: #0d1117;
+    border-bottom: 1px solid #30363d;
+    padding: 0 32px;
+}
+
+.tabs {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    gap: 8px;
+}
+
+.tab {
+    background: none;
+    border: none;
+    color: #8b949e;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s;
+    position: relative;
+}
+
+.tab svg {
+    opacity: 0.7;
+}
+
+.tab:hover {
+    color: #c9d1d9;
+    border-bottom-color: #30363d;
+}
+
+.tab.active {
+    color: #f0f6fc;
+    border-bottom-color: #f78166;
+}
+
+.tab.active svg {
+    opacity: 1;
+}
+
+/* Main Content */
+.main-content {
+    max-width: 1280px;
+    margin: 24px auto;
+    padding: 0 32px;
+    display: grid;
+    grid-template-columns: 296px 1fr;
+    gap: 24px;
+}
+
+/* Profile Section */
+.profile-section {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.avatar-container {
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 1px solid #30363d;
+}
+
+.avatar {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.username {
+    font-size: 26px;
+    font-weight: 600;
+    color: #f0f6fc;
+    margin: 0;
+    line-height: 1.25;
+}
+
+.follow-btn {
+    width: 100%;
+    padding: 8px 16px;
+    background-color: #21262d;
+    color: #f0f6fc;
+    border: 1px solid #30363d;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.follow-btn:hover {
+    background-color: #30363d;
+    border-color: #8b949e;
+}
+
+/* Stats */
+.stats {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: #8b949e;
+}
+
+.stat-link {
+    color: #8b949e;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.stat-link:hover {
+    color: #58a6ff;
+}
+
+.stat-number {
+    color: #f0f6fc;
+    font-weight: 600;
+}
+
+.stat-separator {
+    color: #30363d;
+}
+
+/* Profile Image Large */
+.profile-image-large {
+    width: 100%;
+    max-width: 600px;
+    aspect-ratio: 16/9;
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid #30363d;
+}
+
+.large-avatar {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Heatmap Section */
+.heat-map-section {
+    padding: 24px;
+    background-color: #0d1117;
+    border: 1px solid #30363d;
+    border-radius: 6px;
+}
+
+.heatmap-container {
+    width: 100%;
+}
+
+.heatmap-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #f0f6fc;
+    margin: 0 0 16px 0;
+}
+
+.HeatMapProfile {
+    width: 100%;
+    overflow-x: auto;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-content {
+        grid-template-columns: 1fr;
+        padding: 0 16px;
+    }
+
+    .header {
+        padding: 16px;
+    }
+
+    .tabs-container {
+        padding: 0 16px;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .nav-link {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+
+    .profile-image-large {
+        max-width: 100%;
+    }
+}

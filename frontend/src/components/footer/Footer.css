@@ -1,0 +1,157 @@
+.footer {
+    background-color: #0d1117;
+    border-top: 1px solid #21262d;
+    margin-top: auto;
+    width: 100%;
+}
+
+.footer-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 40px 32px 24px;
+    display: flex;
+    justify-content: space-between;
+    gap: 32px;
+}
+
+/* Left Section */
+.footer-left {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    min-width: 200px;
+}
+
+.footer-logo {
+    width: 24px;
+    height: 24px;
+    opacity: 0.6;
+}
+
+.footer-copyright {
+    color: #8b949e;
+    font-size: 12px;
+}
+
+/* Center Section - Link Columns */
+.footer-links {
+    display: flex;
+    gap: 48px;
+    flex-wrap: wrap;
+    flex: 1;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 120px;
+}
+
+.footer-column h4 {
+    color: #f0f6fc;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.footer-column a {
+    color: #58a6ff;
+    text-decoration: none;
+    font-size: 12px;
+    transition: color 0.2s;
+}
+
+.footer-column a:hover {
+    color: #79c0ff;
+    text-decoration: underline;
+}
+
+/* Right Section - Social Icons */
+.footer-social {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+}
+
+.social-link {
+    color: #8b949e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.2s;
+    padding: 4px;
+}
+
+.social-link:hover {
+    color: #c9d1d9;
+}
+
+.social-link svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* Bottom Bar */
+.footer-bottom {
+    border-top: 1px solid #21262d;
+    padding: 16px 32px;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.footer-bottom-links {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.footer-bottom-links a {
+    color: #58a6ff;
+    text-decoration: none;
+    font-size: 12px;
+    transition: color 0.2s;
+}
+
+.footer-bottom-links a:hover {
+    color: #79c0ff;
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .footer-container {
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    .footer-links {
+        gap: 32px;
+    }
+
+    .footer-social {
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        padding: 32px 16px 20px;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .footer-bottom {
+        padding: 16px;
+    }
+
+    .footer-bottom-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+}

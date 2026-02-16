@@ -1,0 +1,74 @@
+const mongoose=require("mongoose");
+const { required, boolean } = require("yargs");
+const { Schema }=mongoose;
+
+const RepositorySchema=new Schema({
+    name:{
+        type:String,
+        required:true,
+        unique:true,
+    },
+    description :{
+        type:String,
+    },
+    content:[
+        {
+            type:String,
+        },
+    ],
+    visibility:{
+        type:Boolean,
+    },
+    owner:{
+        type:Schema.Types.ObjectId,
+        ref:"User",
+        required:true,
+    },
+    issues:[
+        {
+            type:Schema.Types.ObjectId,
+            ref:"Issue",
+        },
+    ],
+    stars: {
+        type: Number,
+        default: 0,
+    },
+    starredBy: [
+        {
+            type: Schema.Types.ObjectId,
+            ref: "User",
+        },
+    ],
+    forks: {
+        type: Number,
+        default: 0,
+    },
+    forkedFrom: {
+        type: Schema.Types.ObjectId,
+        ref: "Repository",
+        default: null,
+    },
+    watchers: {
+        type: Number,
+        default: 0,
+    },
+    createdAt: {
+        type: Date,
+        default: Date.now,
+    },
+    updatedAt: {
+        type: Date,
+        default: Date.now,
+    },
+});
+
+RepositorySchema.pre('save', async function() {
+    if (this.isNew && !this.createdAt) {
+        this.createdAt = Date.now();
+    }
+    this.updatedAt = Date.now();
+});
+
+const Repository=mongoose.model("Repository",RepositorySchema);
+module.exports= Repository;
