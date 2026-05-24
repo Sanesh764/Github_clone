@@ -67,10 +67,9 @@ function startServer() {
     const app = express();
     const port = process.env.PORT || 3000;
 
-    const mongoURL = process.env.MONGODB_URL;
-
+    mongoose.set('bufferCommands', false);
     mongoose
-        .connect(mongoURL)
+        .connect(mongoURL, { serverSelectionTimeoutMS: 5000 })
         .then(() => console.log("mongoDb conntected"))
         .catch((err) => console.error("unable to connect : ", err));
 

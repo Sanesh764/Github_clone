@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 import { useAuth } from "../../authContext";
 import "./auth.css";
 import logo from "../../assets/github-mark-white.svg";
@@ -63,7 +64,7 @@ const Login = () => {
             {loading ? "Loading..." : "Login"}
           </button>
         </form>
-        <p>New to GitHub? <a href="/signup">Create account</a></p>
+        <p>New to GitHub? <Link to="/signup">Create account</Link></p>
       </div>
     </div>
   );

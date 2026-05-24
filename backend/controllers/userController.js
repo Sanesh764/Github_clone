@@ -12,7 +12,7 @@ let client;
 
 async function connectClient() {
     if (!client) {
-        client = new MongoClient(uri);
+        client = new MongoClient(uri, { connectTimeoutMS: 5000, serverSelectionTimeoutMS: 5000 });
         await client.connect();
     }
 }

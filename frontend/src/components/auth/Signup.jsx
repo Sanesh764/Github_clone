@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 import { useAuth } from "../../authContext";
 import "./auth.css";
 import logo from "../../assets/github-mark-white.svg";
@@ -90,7 +91,7 @@ const Signup = () => {
             {loading ? "Loading..." : "Sign Up"}
           </button>
         </form>
-        <p>Already have an account? <a href="/auth">Login</a></p>
+        <p>Already have an account? <Link to="/auth">Login</Link></p>
       </div>
     </div>
   );
